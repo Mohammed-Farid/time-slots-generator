@@ -44,9 +44,11 @@ function getTimeSlots(blockTimes, showTimeAsString, interval, includeStartBlocke
       break;
   }
   var start = 0;
-  var dateTimes = Array(Math.round(24 * times))
+  var dateTimes = Array(Math.round(24 * times + 1))
     .fill(0)
-    .map(function(_) {
+    .map(function(_, index) {
+       if (index === 0) return start;
+      
       start = start + sums;
       return start;
     });
