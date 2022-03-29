@@ -10,6 +10,10 @@ function getTimeSlots(blockTimes, showTimeAsString, interval, includeStartBlocke
     includeStartBlockedTime = includeStartBlockedTime === true ? true : false;
     includeEndBlockedTime = includeEndBlockedTime === true ? true : false;
   switch (interval) {
+    case "fifth":
+      times = 12;
+      sums = 5;
+      break;
     case "tenth":
       times = 6;
       sums = 10;
