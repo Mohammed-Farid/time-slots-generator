@@ -26,6 +26,10 @@ function getTimeSlots(blockTimes, showTimeAsString, interval, includeStartBlocke
       times = 2;
       sums = 30;
       break;
+    case "three-quarters":
+      times = 1 + (1/3);
+      sums = 45;
+      break;
     case "one":
       times = 1;
       sums = 60;
